@@ -1,0 +1,51 @@
+
+section {
+    display: flex;
+    padding: 3rem;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.5rem;
+    background-color: #17141D;
+
+    height: 16rem;
+    width: 10rem;
+    padding: 1.5rem;
+    margin: 0.5rem;
+
+    box-shadow: -3rem 0 3rem -2rem #000;
+
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-1rem) scale(1.05);
+}
+
+.card:hover~.card {
+    transform: translateX(3rem)
+}
+
+.card:not(:first-child) {
+    margin-left: -3rem;
+}
+
+.card-header > a{
+    color: white;
+    text-decoration: none;
+}
+
+.card:hover > .card-header{
+    background: linear-gradient(to right, #cd295a 32%,#38adae 100%);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

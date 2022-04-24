@@ -1,0 +1,64 @@
+@import url(deck-menu.css);
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: inherit;
+    width: inherit;
+    padding: 0;
+    margin: 0;
+
+    font-size: 14px;
+
+
+    font-family: 'Ubuntu Mono', monospace;
+    color: whitesmoke;
+    background-image: linear-gradient(135deg, #38ADAE 0%, #CD295A 100%);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    height: inherit;
+    width: inherit;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.section-header {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2rem;
+}
+
+#about-grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+a#back{
+    color: whitesmoke;
+    font-family: 'Ubuntu Mono', monospace;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform .5s;
+
+
+}
+
+a#back:hover{
+    transform: scale(1.2);
+}
+
+

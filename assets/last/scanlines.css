@@ -1,0 +1,28 @@
+.scanlines::before {
+    /*Make the ::before 'overlay' visible*/
+    content: "";
+    display: block;
+
+    /*Make the overlay fixed on the screen*/
+    position: fixed;
+    top:0;
+    left: 0;
+
+    /*Make it cover it's parent*/
+    width: 100%;
+    height:100vh;
+    min-height:100%;
+    z-index: 10;
+
+    /*Avoid any interaction with the user*/
+    pointer-events: none;
+
+    /*Draw a 2 pice 'gradient'*/
+    background: linear-gradient(rgba(0, 0, 0, 0) 50%,
+            /*Half transparent*/
+            rgba(0, 0, 0, 1) 50%);
+    /*Half opaque*/
+
+    /*Repeat the gradient like a mosaic so it creates the scanline effect*/
+    background-size: 100% 2px;
+}

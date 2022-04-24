@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+.font-VT232 {
+    font-family: 'VT323', monospace;
+}
+
+/*Original Fallout NV pipboy colors*/
+.crt-green {
+    color: #1aff80;
+    background-color: rgb(1, 20, 9);
+
+    /*Glow effect*/
+    text-shadow: 0 0 10px rgb(26, 255, 128);
+}
+
+.crt-blue {
+    color: rgb(46, 207, 255);
+    background-color: rgb(3, 16, 20);
+
+    /*Glow effect*/
+    text-shadow: 0 0 10px rgb(46, 207, 255);
+}
+
+.crt-amber {
+    color: rgb(255, 182, 66);
+    background-color: rgb(20, 14, 4);
+
+    /*Glow effect*/
+    text-shadow: 0 0 10px rgb(255, 182, 66);
+}
+
+.crt-white {
+    color: rgb(192, 255, 255);
+    background-color: rgb(15, 20, 20);
+
+    /*Glow effect*/
+    text-shadow: 0 0 10px rgb(192, 255, 255);
+}

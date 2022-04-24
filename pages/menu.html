@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href={{ url_for('assets', filename='menu/menu.css' ) }}>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Site History</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h2 class="section-header">My website past iterations, enjoy!</h2>
+        </section>
+
+        <section>
+            {%for i in range(1, len+1)%}
+
+            <article class="card">
+                <h2 class="card-header">
+                    <a href={{"V" + i|string + ".html" }}>Version {{i}}</a>
+                </h2>
+            </article>
+
+            {%endfor%}
+        </section>
+        <a href="/" id="back">BACK</a>
+    </main>
+</body>
+
+</html>
