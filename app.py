@@ -1,4 +1,5 @@
 import os
+import json
 import flask as fl
 
 app = fl.Flask(__name__, template_folder="pages", static_folder="assets")
@@ -11,10 +12,18 @@ nfiles = len(
     ]
 )
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def index():
-    return fl.render_template("last.html")
+    sides = None
+    with open("sides.json", "+r") as s:
+        sides = json.load(s)
+    
+    if fl.request.method == 'POST':
+        form = json.dumps(fl.request.form)
+        with open("messages.json", '+a') as m:
+            m.write(form + ',') #Not sending an email for security reasons
 
+    return fl.render_template("last.html", sides=sides)
 
 @app.route("/menu")
 def menu():

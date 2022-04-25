@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap");
+
+@import url("animations.css");
+@import url("crt-color-glow.css");
+@import url("scanlines.css");
+
+html {
+  font-family: "VT323", monospace;
+
+  font-size: clamp(18px, 1.7vw, 40px);
+  font-weight: 500;
+
+  min-height: fit-content;
+
+  background-color: #191a19;
+  cursor: crosshair;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  margin: 0;
+
+  max-width: 37rem;
+
+  min-height: fit-content;
+  max-height: fit-content;
+}
+
+.box-green-glow nav,
+.box-green-glow nav > *,
+.box-green-glow section,
+.box-green-glow input,
+.box-green-glow textarea,
+.box-green-glow button {
+  box-shadow: 0 0 4px #1aff80;
+
+  border: 3px;
+  border-style: solid;
+  border-color: #1aff80;
+
+  background-color: #191a19;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 100%;
+
+  margin: 0.5rem;
+  align-items: center;
+}
+
+#myname {
+  font-family: "Source Code Pro", monospace;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+#myname h1 {
+  font-size: clamp(2.5rem, -0.4rem + 17.3vw, 6.4rem);
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+
+  margin: 0.5rem;
+}
+
+a {
+  color: inherit;
+  font-weight: 700;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+summary {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 0.5rem;
+}
+
+p {
+  max-width: 33rem;
+  margin: 0;
+}
+
+section > p {
+  text-align: justify;
+  margin: 0 2rem 0.5rem 2rem;
+}
+
+details {
+  display: flex;
+  margin: 0.5rem 0 0.5rem 0;
+  justify-content: center;
+}
+
+details > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+details > div > * {
+  padding: 0.5rem;
+}
+
+span.dark {
+  opacity: 0.2;
+}
+
+div#skills {
+  display: grid;
+  width: fit-content;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  justify-items: right;
+}
+
+div#skills-legend {
+  display: grid;
+  width: fit-content;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 2.5fr;
+  justify-items: stretch;
+}
+
+div#skills-legend p:nth-child(odd) {
+  text-align: right;
+}
+
+ul#sides {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-evenly;
+
+margin: 0;
+padding: 0;
+}
+
+#sides li{
+  display: block;
+  list-style: none;
+  border: 3px solid #1aff80;
+  
+  padding: 0.5rem;
+  margin: 0.5rem;
+
+  width: fit-content;
+}
+
+label {
+  text-align: right;
+}
+
+form {
+  display: flex;
+}
+
+button {
+  font-family: "VT323", monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+input, textarea{
+  font-size: .7rem;
+  color: #1aff80;
+}
+
+.contact-form > .form-fields {
+  margin: 0.5rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 2fr;
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+
+.contact-form > .form-buttons {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0.5rem;
+}
