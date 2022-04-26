@@ -4,10 +4,7 @@
 name: Python application
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -28,3 +25,5 @@ jobs:
         python -m pip install --upgrade pip
         pip install black flask
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Install dependencies
+      run: python app.py
